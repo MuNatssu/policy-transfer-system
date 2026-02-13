@@ -1,0 +1,40 @@
+name: データ更新・統計レビュー（Data Review）
+description: 古いデータの指摘、新しい統計の追加、根拠資料の更新を行うためのテンプレート
+title: "[データ更新] "
+labels: ["データ", "要更新"]
+body:
+  - type: textarea
+    id: current
+    attributes:
+      label: 現在の記述
+      description: 修正対象となるデータや記述を引用してください。
+      placeholder: "例：『シングルマザーの貧困率は50%』と記載されている部分"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: 問題点
+      description: なぜそのデータが問題なのか、古いのか、不正確なのかを記載してください。
+      placeholder: "例：最新の2023年版では数値が更新されているため。"
+    validations:
+      required: true
+
+  - type: textarea
+    id: newdata
+    attributes:
+      label: 新しいデータ・資料
+      description: 更新すべき統計や資料を記載してください。
+      placeholder: "例：厚労省『国民生活基礎調査 2023』"
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 修正案（任意）
+      description: どのように書き換えるべきか提案があれば記載してください。
+      placeholder: "例：『2023年の最新データでは、貧困率は◯◯%に改善している』"
+    validations:
+      required: false
